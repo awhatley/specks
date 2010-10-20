@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{951046F7-AB86-4051-A14F-7CD2FC597DFB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Specks.Tests</RootNamespace>
+    <AssemblyName>Specks.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework">
+      <HintPath>..\References\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CandidateSelectionTestFixture.cs" />
+    <Compile Include="Comparisons\BinaryComparisonTestFixture.cs" />
+    <Compile Include="Comparisons\ContainsTestFixture.cs" />
+    <Compile Include="Comparisons\EndsWithTestFixture.cs" />
+    <Compile Include="Comparisons\MatchesRegExTestFixture.cs" />
+    <Compile Include="Comparisons\StartsWithTestFixture.cs" />
+    <Compile Include="Comparisons\TypeIsTestFixture.cs" />
+    <Compile Include="CompositionTestFixture.cs" />
+    <Compile Include="ConstructionTestFixture.cs" />
+    <Compile Include="ExtensionsTestFixture.cs" />
+    <Compile Include="FluentConstructionTestFixture.cs" />
+    <Compile Include="Logic\ConjunctionTestFixture.cs" />
+    <Compile Include="Logic\ContradictionTestFixture.cs" />
+    <Compile Include="Logic\ConversionTestFixture.cs" />
+    <Compile Include="Logic\DisjunctionTestFixture.cs" />
+    <Compile Include="Logic\ExclusiveDisjunctionTestFixture.cs" />
+    <Compile Include="Logic\ExistentialQuantificationTestFixture.cs" />
+    <Compile Include="Logic\NegationTestFixture.cs" />
+    <Compile Include="Logic\PropositionTestFixture.cs" />
+    <Compile Include="Logic\TautologyTestFixture.cs" />
+    <Compile Include="Logic\UniqueQuantificationTestFixture.cs" />
+    <Compile Include="Logic\UniversalQuantificationTestFixture.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ParameterRebinderPerformanceTest.cs" />
+    <Compile Include="Stubs\IntegerComposite.cs" />
+    <Compile Include="Stubs\IntegerEqualToZero.cs" />
+    <Compile Include="Stubs\IntegerGreaterThanZero.cs" />
+    <Compile Include="Stubs\IntegerLessThanZero.cs" />
+    <Compile Include="Stubs\IntegerPredicate.cs" />
+    <Compile Include="TypeConversionTestFixture.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Specks\Specks.csproj">
+      <Project>{782D6FD2-60E0-438A-8087-6DC241397601}</Project>
+      <Name>Specks</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

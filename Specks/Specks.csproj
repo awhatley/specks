@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{782D6FD2-60E0-438A-8087-6DC241397601}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Specks</RootNamespace>
+    <AssemblyName>Specks</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Specks.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Specks.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Comparisons\BinaryComparison.cs" />
+    <Compile Include="Comparisons\Contains.cs" />
+    <Compile Include="Comparisons\EndsWith.cs" />
+    <Compile Include="Comparisons\MatchesRegex.cs" />
+    <Compile Include="Comparisons\StartsWith.cs" />
+    <Compile Include="Comparisons\TypeIs.cs" />
+    <Compile Include="CompositeSpecification.cs" />
+    <Compile Include="Expressions\ExpressionReplacer.cs" />
+    <Compile Include="Expressions\ExpressionWriter.cs" />
+    <Compile Include="Logic\Conjunction.cs" />
+    <Compile Include="Logic\Contradiction.cs" />
+    <Compile Include="Logic\Conversion.cs" />
+    <Compile Include="Logic\Disjunction.cs" />
+    <Compile Include="Logic\ExclusiveDisjunction.cs" />
+    <Compile Include="Logic\ExistentialQuantification.cs" />
+    <Compile Include="Logic\Negation.cs" />
+    <Compile Include="Logic\Proposition.cs" />
+    <Compile Include="Logic\Tautology.cs" />
+    <Compile Include="Logic\UniqueQuantification.cs" />
+    <Compile Include="Logic\UniversalQuantification.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Specification.cs" />
+    <Compile Include="SpecificationExtensions.cs" />
+    <Compile Include="Specify.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
